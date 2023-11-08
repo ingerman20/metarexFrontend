@@ -1,0 +1,122 @@
+.previews {
+  display: grid;
+  grid-auto-flow: column;
+  width: fit-content;
+  height: max-content;
+  margin: 16px;
+  gap: 16px;
+}
+
+.preview {
+  width: 64px;
+  position: relative;
+  border: 2px solid #424649;
+  display: flex;
+  align-items: center;
+}
+
+.deleteButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #424649;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  animation: downscale 0.3s forwards ease-in, makeLightRed 0.3s forwards ease-in;
+}
+
+.deleteButton:hover {
+  animation: upscale 0.3s forwards ease-in, makeDarkRed 0.3s forwards ease-in;
+}
+
+.image {
+  width: 100%;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #424649;
+  color: #ffffff;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  animation: downscale 0.3s forwards ease-in, makeLight 0.3s forwards ease-in;
+}
+
+.label:hover {
+  animation: upscale 0.3s forwards ease-in, makeDark 0.3s forwards ease-in;
+}
+
+@keyframes upscale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes downscale {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes makeDarkBlack {
+  from {
+    background: #424649;
+  }
+
+  to {
+    background: #212529;
+  }
+}
+
+@keyframes makeLightBlack {
+  from {
+    background: #212529;
+  }
+  to {
+    background: #424649;
+  }
+}
+
+@keyframes makeDarkRed {
+  from {
+    background: #fb4444;
+  }
+
+  to {
+    background: #ff0000;
+  }
+}
+
+@keyframes makeLightRed {
+  from {
+    background: #ff0000;
+  }
+  to {
+    background: #fb4444;
+  }
+}
