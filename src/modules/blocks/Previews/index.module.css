@@ -1,0 +1,8 @@
+.previews {
+  display: grid;
+  grid-auto-flow: column;
+  width: fit-content;
+  height: max-content;
+  margin: 16px;
+  gap: 16px;
+}

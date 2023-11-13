@@ -1,8 +1,8 @@
-import { AttachmentButton } from './components/Button';
+import { AttachmentModule } from './modules';
 import './App.css';
 
 function App() {
-  return <AttachmentButton />;
+  return <AttachmentModule />;
 }
 
 export default App;

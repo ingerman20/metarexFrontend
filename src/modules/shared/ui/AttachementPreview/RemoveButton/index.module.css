@@ -1,0 +1,59 @@
+.removeButton {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #424649;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+  animation: downscale 0.3s forwards ease-in, makeLightRed 0.3s forwards ease-in;
+}
+
+.removeButton:hover {
+  animation: upscale 0.3s forwards ease-in, makeDarkRed 0.3s forwards ease-in;
+}
+
+@keyframes upscale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes downscale {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes makeDarkRed {
+  from {
+    background: #fb4444;
+  }
+
+  to {
+    background: #ff0000;
+  }
+}
+
+@keyframes makeLightRed {
+  from {
+    background: #ff0000;
+  }
+  to {
+    background: #fb4444;
+  }
+}

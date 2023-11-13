@@ -1,0 +1,11 @@
+.preview {
+  width: 64px;
+  position: relative;
+  border: 2px solid #424649;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+}

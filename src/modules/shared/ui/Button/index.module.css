@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  gap: 10px;
+  margin: 16px;
+}
+
+.input {
+  display: none;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background: #424649;
+  color: #ffffff;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  animation: downscale 0.3s forwards ease-in, makeLight 0.3s forwards ease-in;
+}
+
+.label:hover {
+  animation: upscale 0.3s forwards ease-in, makeDark 0.3s forwards ease-in;
+}
+
+@keyframes upscale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes downscale {
+  from {
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
